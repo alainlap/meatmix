@@ -1,0 +1,19 @@
+
+<div id="wrapper">
+	<h1>Let's Mix Some Meat</h1>
+
+
+	<% combo = Meat.new_meat_combo %>
+	<% combo.each do |m| %>
+		<div class="meat">
+			<%= link_to image_tag(m.url), "/meats/#{m.id}" %>
+			<p><%= m[:name] %> (<%= m[:group] %>)</p>
+		</div>
+
+	<% end %>
+
+	<div id="functions">
+		<button>Add Meat</button>
+		<button>View Meat</button>
+	</div>
+</div>

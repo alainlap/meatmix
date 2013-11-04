@@ -1,0 +1,52 @@
+// Place all the styles related to the meats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: white;
+$secondary-color: tomato;
+$font: Lato, sans-serif;
+
+body {
+	background: $primary-color;
+	font-family: $font;
+	font-weight: 300;
+}
+
+img {
+	
+}
+
+h1 {
+	font-size: 3em;
+	font-weight:300;
+	margin: 0 0 50px 0;
+}
+
+button {
+	display:inline-block;
+	background:$secondary-color;
+	border: 0;
+	border-radius: 5px;
+	font-size: 1em;
+	font-family: $font;
+	font-weight: 300;
+	padding: 8px 12px 8px 12px;
+}
+
+.meat {
+	display: inline-block;
+}
+
+.meat img {
+	width: 200px;
+	height: 200px;
+}
+
+#wrapper {
+	text-align: center;
+	padding: 100px 0 0 0;
+}
+
+#functions {
+	margin: 50px 0 0 0;
+}
