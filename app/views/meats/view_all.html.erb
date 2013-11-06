@@ -1,0 +1,25 @@
+
+
+<div class="container">
+
+	<div class="row">
+	<% @meat.each do |m| %>
+		  <div class="col-sm-6 col-md-4" style="margin-bottom: 15px">
+		  	<div class="thumbnail">
+		    <%= link_to image_tag(m.url, :class => "crop"), "/meats/#{m.id}" %>
+		    </div>
+		      <div class="caption">
+		        <h3><%= m[:name] %>
+		        	<small>
+			        <%= link_to "View", "/meats/#{m.id}" %> |
+			        <%= link_to "Edit", edit_meat_path(m) %> |
+			        <%= link_to "Delete", m, :confirm => "Are you sure you want to delete #{@meat.name}?", :method => :delete %>
+		        </small>
+		        </h3>
+		        <p><%= "#{truncate(m.description, :length => 200, :separator => ' ')}" %></p>
+		      </div>
+		    </div>
+	
+	<% end %>
+	</div>
+</div>

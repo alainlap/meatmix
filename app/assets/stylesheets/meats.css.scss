@@ -10,6 +10,8 @@ body {
 	background: $primary-color;
 	font-family: $font;
 	font-weight: 300;
+	padding-top: 100px;
+	padding-bottom: 50px;
 }
 
 img {
@@ -33,20 +35,72 @@ button {
 	padding: 8px 12px 8px 12px;
 }
 
+.container {
+	max-width: 900px
+}
+
 .meat {
 	display: inline-block;
 }
 
 .meat img {
-	width: 200px;
-	height: 200px;
+	
+}
+
+.wrap {
+	display:inline-block;
+	margin: 0 25px 0 0;
 }
 
 #wrapper {
 	text-align: center;
-	padding: 100px 0 0 0;
+	padding: 50px 0 0 0;
+	display:block;
 }
 
 #functions {
 	margin: 50px 0 0 0;
+}
+
+#results {
+	font-size: 3em;
+	font-weight:400;
+	display: block;
+	
+	background: tomato;
+	margin: 0 0 50px 0;
+}
+
+#jumbo {
+	
+}
+
+form p {
+	;
+}
+
+.caption h3 small {
+	font-size: 0.5em;
+}
+
+.crop {
+    width: 260px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.crop img {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    margin: -75px 0 0 -100px;
+}
+
+#shuffle {
+	height: 100px;
+}
+
+#jumbo {
+	font-size: 5em;
 }

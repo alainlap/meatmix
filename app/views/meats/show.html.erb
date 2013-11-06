@@ -1,0 +1,20 @@
+
+
+<div class="container">
+	<h1><%= "#{@meat.name}" %>: <small><%= "#{@meat.alias}" %></small></h1>
+
+	<div class="wrapper">
+		<div class="wrap">
+			<%= image_tag @meat.url, :class => "thumbnail", :size => "400x400" %>
+		</div>
+		<div class="wrap" style="position: absolute">
+			<p><b>Name:</b> <%= @meat.name %></p>
+			<p><b>Category:</b> <%= @meat.category %></p>
+			<p><b>Syllables:</b> <%= @meat.syllable_1 %> | <%= @meat.syllable_2 %> | <%= @meat.syllable_3 %></p>
+			<p><b>Description:</b> <%= @meat.description %></p>
+
+			<%= link_to "Edit", edit_meat_path(@meat) %> | 
+			<%= link_to "Delete", @meat, :confirm => "Are you sure you want to delete #{@meat.name}?", :method => :delete %>
+		</div>
+	</div>
+</div>

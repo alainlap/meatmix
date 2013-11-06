@@ -13,11 +13,18 @@
 
 ActiveRecord::Schema.define(version: 20131104205602) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "meats", force: true do |t|
-    t.string   "group"
     t.string   "name"
-    t.string   "flavour"
+    t.string   "category"
+    t.string   "alias"
+    t.text     "description"
     t.string   "url"
+    t.string   "syllable_1"
+    t.string   "syllable_2"
+    t.string   "syllable_3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

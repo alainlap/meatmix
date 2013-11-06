@@ -1,0 +1,57 @@
+
+<%= form_for @meat, :class => "form-horizontal", :role => "form" do |f| %>
+		
+		<div class="form-group">
+		    <%= f.label "name" %><br>
+		    <%= f.text_field "name", :class => "form-control", :placeholder => "Chicken" %>
+		</div>		
+		<div class="form-group">
+		    <%= f.label "alias" %><br>
+		    <%= f.text_field "alias", :class => "form-control", :placeholder => "Gallus gallus domesticus" %>
+		</div>
+		<div class="form-group">
+		    <%= f.label "category" %><br>
+		    <%= f.text_field "category", :class => "form-control", :placeholder => "Poultry" %>
+		 </div>
+		<div class="form-group">
+	    <%= f.label "url" %><br>
+	    <%= f.text_field "url", :class => "form-control", :placeholder => "http://www.example.com/photo.jpg" %>
+	    </div>
+	 	<div class="form-group">
+	    <%= f.label "description" %><br>
+	    <%= f.text_area "description", :class => "form-control", :rows => "7", :placeholder => "Umami" %>
+	  	</div>
+
+		<p>In order to generate new mixes i.e. TURDUCKEN, you must input syllables for your new meat. For example, if your meat is "Chicken", you might put "CHI", "CHI", "KEN".</p>	  
+	  <div class="well">
+		  <div class="form-group">
+		    <%= f.label "Syllable 1" %>
+		    <%= f.text_field "syllable_1", :class => "form-control", :placeholder => "CHI" %>
+		  </div>
+		  <div class="form-group">
+		    <%= f.label "Syllable 2" %>
+		    <%= f.text_field "syllable_2", :class => "form-control", :placeholder => "CHI" %>
+		  </div>
+		  <div class="form-group">
+		    <%= f.label "Syllable 3" %>
+		    <%= f.text_field "syllable_3", :class => "form-control", :placeholder => "KEN" %>
+		  </div>
+		</div>
+
+		<% if @meat.errors.any? %>
+		  <div id="error_explanation" class="alert alert-danger">
+		    
+		    <ul>
+		    <% @meat.errors.full_messages.each do |msg| %>
+		      	<strong>Error:</strong> <%= msg %>
+		    <% end %>
+		    </ul>
+		  </div>
+		<% end %>
+
+	  <p>
+	  		<%= f.submit "Save", :class => "btn btn-success btn-sm" %> 
+	  		<%= link_to "Cancel", root_path, :class => "btn btn-warning btn-sm" %>
+	  </p>
+
+	<% end %>
